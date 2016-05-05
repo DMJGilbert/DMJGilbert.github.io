@@ -1,0 +1,246 @@
+body {
+	background-color: #42484D;
+	color: #42484D;
+	font-family: 'Fira Sans';
+	font-size: 120%;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+main {
+	max-width: 1170px;
+	margin: 130px auto;
+	background-color: #F2F2F2;
+}
+
+header {
+	background-image: url('../images/header-background.png');
+	background-size: cover;
+	height: 70vh;
+	min-height: 500px;
+	position: relative;
+	color: #F2F2F2;
+	overflow: hidden;
+}
+
+header div.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+header div.logo span {
+	font-weight: 100;
+	font-size: 5em;
+	text-align: center;
+	display: block;
+}
+
+header div.logo span:nth-of-type(2) {
+	margin-top: -0.4em;
+	font-weight: 300;
+}
+
+header div.player {
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+}
+
+header div.player span {
+	font-weight: 300;
+	font-size: 1.2em;
+	display: block;
+}
+
+header div.player span:nth-of-type(2) {
+	font-size: 1em;
+	font-weight: 100;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 1170px;
+	max-height: 1.4em;
+}
+
+article {
+	min-height: 50vh;
+	padding: 100px;
+	overflow: auto;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: #00c1ad;
+	color: #F2F2F2;
+}
+
+article:nth-of-type(2n + 3) {
+	color: #42484D;
+	background-color: transparent;
+}
+
+footer h1 {
+	font-weight: 300;
+	font-size: 3rem;
+}
+
+article h2 {
+	font-weight: 300;
+	font-size: 3rem;
+}
+
+article p {
+	width: 50%;
+	font-weight: 200;
+}
+
+article#about {
+	background-image: url('../images/about-background.png');
+	background-position: 80% 40%;
+	background-color: transparent;
+	color: #42484D;
+}
+
+article#edulect {
+	background-image: url('../images/edulect-background.png');
+}
+
+article#comeflywithme {
+	background-image: url('../images/comeflywithme-background.png');
+}
+
+article#colab {
+	background-image: url('../images/colab-background.png');
+}
+
+article#realirc {
+	background-image: url('../images/realirc-background.png');
+}
+
+article#srs {
+	background-image: url('../images/srs-background.png');
+}
+
+div.tags {
+	width: 50%;
+}
+
+div.tags span {
+	font-size: 0.6em;
+	padding: 0.6em 1em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	background-color: rgba(255, 255, 255, 0.3);
+	display: inline-block;
+}
+
+footer {
+	min-height: 50vh;
+	padding: 100px;
+	overflow: auto;
+	text-align: center;
+}
+
+footer input {
+	border: 0px;
+	font-size: 1.6em;
+	width: 50%;
+	padding: 0.3em 0.5em;
+	display: block;
+	font-weight: 200;
+	margin: .7em auto;
+}
+
+footer input[placeholder],
+footer textarea[placeholder] {
+	font-family: 'Fira Sans';
+	font-weight: 200;
+	color: #42484D;
+}
+
+footer textarea {
+	border: 0px;
+	font-size: 1.6em;
+	width: 50%;
+	max-width: 50%;
+	min-height: 200px;
+	padding: 0.3em 0.5em;
+	display: block;
+	font-family: 'Fira Sans';
+	font-weight: 200;
+	color: #42484D;
+	margin: .7em auto;
+}
+
+footer button {
+	border: 0px;
+	font-size: 1.2em;
+	width: 53%;
+	color: #F2F2F2;
+	padding: 0.5em 0.5em;
+	background-color: #00c1ad;
+}
+
+footer a {
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: #42484D;
+	text-decoration: none;
+	margin-top: 30px;
+	display: inline-block;
+	padding: 0.6em 1em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer a:hover{
+	background-color: #00c1ad;
+	color: #F2F2F2;
+}
+
+@media (max-width: 1170px) {
+	body,
+	h1 {
+		font-size: 90%;
+	}
+	main {
+		margin: 20px auto;
+	}
+	header div.player span:nth-of-type(2) {
+		/*		-webkit-animation: scroller 7s infinite linear;*/
+
+		min-width: 96vw;
+	}
+	article {
+		padding: 50px;
+	}
+	article p,
+	div.tags {
+		width: 100%;
+	}
+	article#about {
+		background-image: none;
+	}
+	article:not(#about) {
+		padding-bottom: 530px;
+	}
+	div.tags span {
+		font-size: 0.8em;
+	}
+	footer input,
+	footer textarea {
+		width: 90%;
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 550px) {
+	article:not(#about) {
+		background-size: 100%;
+		padding-bottom: 110vw;
+	}
+	div.tags {
+		display: none;
+	}
+}
