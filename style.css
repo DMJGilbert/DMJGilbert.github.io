@@ -1,0 +1,131 @@
+:root {
+    --light-color: #FAFAFA;
+    --dark-color: #051014;
+    --action-color: #00C1AD;
+    --animation-duration: 0.5s;
+    --color-bars: linear-gradient(90deg, #FFFF00 16.66%, #00FFFF 0 33.33%, #01FF01 0 50%, #FF01FF 0 66.666%, #FE0000 0 83.33%, #0000FE 0);
+}
+
+body {
+    padding: 0;
+	margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    background-image: radial-gradient(var(--dark-color), 1px, transparent 0);
+    background-size: 50px 50px;
+    background-position: -24px -24px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    animation: bodyLoad var(--animation-duration) linear;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10vw;
+    bottom: 0px;
+    height: 10px;
+    width: 80vw;
+    background: var(--color-bars);
+}
+
+
+main {
+    padding: 80px 55px;
+    max-width: 500px;
+    height: 125px;
+    font-size: 30px;
+    animation: mainLoad var(--animation-duration) linear, pulse 10s linear var(--animation-duration) infinite alternate;
+    color: var(--dark-color);
+}
+
+main a {
+    text-decoration: none;
+    color: var(--action-color);
+    animation: mainLoad var(--animation-duration) linear;
+}
+
+main span {
+    color: var(--dark-color);
+    font-weight: 600;
+    animation: nameLoad var(--animation-duration) linear;
+}
+
+nav {
+    padding: 20px;
+    align-self: flex-end;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--action-color);
+    padding: 5px 8px;
+    transition: width 0.4s linear;
+    display: flex;
+}
+
+nav a svg {
+    fill: var(--action-color);
+    width: 20px;
+    padding: 3px;
+}
+
+nav a:hover, nav a:hover svg {
+    background-color: var(--action-color);
+    fill: var(--light-color);
+}
+
+@media (max-width: 555px) {
+    main {
+        font-size: 25px;
+        max-width: 300px;
+        height: 205px;
+    }
+}
+
+@keyframes bodyLoad {
+    0% {
+        background-color: var(--dark-color);
+    }
+    100% {
+        background-color: var(--dark-color);
+    }
+}
+
+@keyframes mainLoad {
+    0% {
+        color: transparent;
+        height: 50px;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes nameLoad {
+    0% {
+        color: var(--light-color);
+    }
+    100% {
+        color: var(--light-color);
+    }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	70% {
+		transform: scale(0.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
